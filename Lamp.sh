@@ -9,11 +9,12 @@ sudo apt-get install zip unzip
 
 # Install Apache
 sudo apt-get install apache2
-# Y to allow to use disk space
-echo "Apache Installed Successfully!"
 
 # Allow to run Apache on boot up
 sudo systemctl enable apache2
+
+# Y to allow to use disk space
+echo "Apache Installed Successfully!"
 
 # Check Firewall Configurations
 echo "Your firewall configuration is."
@@ -24,11 +25,12 @@ sudo ufw allow 22
 sudo ufw allow 80
 sudo ufw allow 443
 
+# start Apache Web Server
+sudo systemctl start apache2
+
 # Allow Read/Write for Owner
 sudo chmod -R 0755 /var/www/html/
 
-# Restart Apache Web Server
-sudo systemctl start apache2
 
 echo "You can check whether the apache is installed properly by accessing public URL/server IP address."
 # If you can see the page then Apache installation is successful.
