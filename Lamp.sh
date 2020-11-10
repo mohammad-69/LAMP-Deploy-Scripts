@@ -51,6 +51,15 @@ sudo echo "<?php phpinfo(); ?>" > /var/www/html/info.php
 # Restart Apache Server
 sudo systemctl restart apache2
 
+echo "------------------------------------";
+echo " Install PHPmyAdmin "
+echo "------------------------------------";
+sudo apt-get install phpmyadmin
+cd /var/www/html
+ln -s /usr/share/phpmyadmin
+#Now enter your_server_ip / phpmyadmin in the browser. You will see PHPmyAdmin’s login form
+
+
 sleep 1
 echo "------------------------------------";
 echo " --- upgrade to php 7.4 --- "
@@ -62,7 +71,7 @@ sudo apt-add-repository ppa:ondrej/php
 sudo apt update
 
 #Install PHP 7.4 with the below command.
-sudo apt install -y php7.4 php7.4-cli php7.4-common php7.4-fpm
+sudo apt install -y php7.4 php7.4-cli php7.4-common php7.4-fpm mcrypt php7.4-mbstring
 
 #To install extensions run
 sudo apt install -y php7.4-mysql php7.4-dom php7.4-simplexml php7.4-ssh2 php7.4-xml php7.4-xmlreader php7.4-curl  php7.4-exif  php7.4-ftp php7.4-gd  php7.4-iconv php7.4-imagick php7.4-json  php7.4-mbstring php7.4-posix php7.4-sockets php7.4-tokenizer
