@@ -77,6 +77,10 @@ sudo apt install -y php7.4-mysql php7.4-dom php7.4-simplexml php7.4-ssh2 php7.4-
 sudo apt-get install libapache2-mod-php7.*
 sudo apt-get install php7.*-mbstring
 sudo apt-get install php7.*-mcrypt
+#To Disable php7.0
+sudo a2dismod php7.0
+#To Enable php7.0
+sudo a2enmod php7.4
 sudo service apache2 restart
 
 
