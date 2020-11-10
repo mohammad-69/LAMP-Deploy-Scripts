@@ -36,9 +36,7 @@ echo "You can check whether the apache is installed properly by accessing public
 # If you can see the page then Apache installation is successful.
 
 # Install MySQL, PHP
-sudo apt install mysql-server php php-mysql libapache2-mod-php php-cli php-mbstring php-gettext php-curl
-sudo phpenmod mcrypt
-sudo phpenmod mbstring
+sudo apt install mysql-server php php-mysql libapache2-mod-php php-cli php-gettext php-curl
 sudo phpenmod curl
 echo "php-cli, curl, mcrypt, mbstring Installed Successfully!"
 
@@ -75,6 +73,14 @@ sudo apt install -y php7.4 php7.4-cli php7.4-common php7.4-fpm mcrypt php7.4-mbs
 
 #To install extensions run
 sudo apt install -y php7.4-mysql php7.4-dom php7.4-simplexml php7.4-ssh2 php7.4-xml php7.4-xmlreader php7.4-curl  php7.4-exif  php7.4-ftp php7.4-gd  php7.4-iconv php7.4-imagick php7.4-json  php7.4-mbstring php7.4-posix php7.4-sockets php7.4-tokenizer
+
+sudo apt-get install libapache2-mod-php7.*
+sudo apt-get install php7.*-mbstring
+sudo apt-get install php7.*-mcrypt
+sudo service apache2 restart
+
+
+
 
 sleep 1
 echo "------------------------------------";
